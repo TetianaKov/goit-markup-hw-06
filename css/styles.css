@@ -622,6 +622,8 @@ h1, фон #ffffff;
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
         border-radius: 4px;
         margin-right: 12px;
+        outline: none;
+      transition: border-color var(--time-duration) var(--timing-function);
     }
     .sign-container::placeholder {
         font-size: 16px;
@@ -630,6 +632,10 @@ h1, фон #ffffff;
                
         padding-left: 16px;
        
+    }
+
+    .sign-container:focus {
+        border-color: var(--accent-color);
     }
 
     .text-sign {
@@ -957,12 +963,12 @@ h1, фон #ffffff;
 
       font-size: 14px;
       color: var(--title-color);
-
-      transition: fill var(--time-duration) var(--timing-function), border var(--time-duration) var(--timing-function);
+      outline: none;
+      transition: fill var(--time-duration) var(--timing-function), border-color var(--time-duration) var(--timing-function);
       }
 
       .modal-input:focus {
-        border: var(--accent-color);
+        border-color: var(--accent-color);
       }
 
       .modal-input:focus + .modal-icon {
